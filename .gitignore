@@ -1,9 +1,6 @@
 # Large ZIP files
 *.zip
 
-# Large input/upload folders
-Input/
-uploads/
 
 # Python virtual environments
 venv/
