@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Autism Spectrum Disorder Predictor</title>
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body style="background-image: url('../static/w3.jpg'); background-repeat: no-repeat;background-attachment: fixed; background-size: cover; font-family: 'Roboto', sans-serif;"> 
+
+    <!-- Navbar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 50px; background-color: #34495e; color: white; border-bottom: 2px solid #2c3e50;">
+        <!-- Project Title -->
+        <div>
+            <h2 style="margin: 0; font-family: 'Roboto', sans-serif;">AI for Weapon Detection</h2>
+        </div>
+        <!-- Top-right menu -->
+        <div style="display: flex; gap: 20px;">
+            <a href="/index" style="color: white; text-decoration: none; font-size: 18px; transition: color 0.3s;">Prediction</a>
+            <a href="/" style="color: white; text-decoration: none; font-size: 18px; transition: color 0.3s;">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Website Title -->
+    <div class="container">
+        <h2 class='container-heading'>
+            <span class="heading_font" style="color: white;">Different charts</span>
+        </h2>
+        <div class='description'>
+            <br></br>
+            <p style="color:red; font-size:18px"></p>
+        </div>
+    </div>
+
+    <!-- Text Area -->
+    <div class="ml-container">
+        <div class="charts-container">
+            <div class="chart">
+                <img src="{{ url_for('static', filename='F1_curve.png') }}" alt="Chart 1">
+            </div>
+            <div class="chart">
+                <img src="{{ url_for('static', filename='P_curve.png') }}" alt="Chart 2">
+            </div>
+            <div class="chart">
+                <img src="{{ url_for('static', filename='R_curve.png') }}" alt="Chart 3">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+    /* General Body Styling */
+    body {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        color: #fff;
+        font-size: 18px;
+        margin: 0;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #000000;
+        color: white;
+        border-bottom: 2px solid #354f68;
+        animation: navbarSlide 1.5s ease-in-out;
+    }
+
+    nav h2 {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left: 20px;
+        transition: color 0.3s, font-size 0.3s;
+    }
+
+    nav a:hover {
+        color: #f39c12;
+        font-size: 20px;
+        transform: scale(1.1);
+    }
+
+    /* Website Title */
+    .container {
+        padding: 25px;
+        position: relative;
+        animation: containerFadeIn 2s ease-in-out;
+    }
+
+    .description p {
+        color: #ffffff;
+        font-style: italic;
+        font-size: 14px;
+        margin: -5px 0 0;
+    }
+
+    /* ml-container (Form Styling with Animation) */
+    .ml-container {
+        margin: 30px 500px;
+        flex: 1 0 auto;
+        animation: slideUp 2s ease-in-out;
+        padding: 30px;
+        background-color: rgba(180, 180, 180, 0.6);
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(197, 196, 196, 0.6);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .ml-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Charts Container */
+    .charts-container {
+        display: block; /* Changed from flex to block to stack the images vertically */
+        padding: 20px 0;
+    }
+
+    .chart {
+        margin: 20px 0; /* Adds space between each image */
+    }
+
+    .chart img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Result Labels */
+    .danger {
+        color: #ff0000;
+    }
+
+    .safe {
+        color: green;
+    }
+
+    .happy {
+        color: #6600cc;
+    }
+
+    .sad {
+        color: #669900;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 30px;
+        text-shadow: 2px 2px 4px black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+</style>

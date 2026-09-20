@@ -1,0 +1,3 @@
+ssdlite_mobilenet_v2.pb and .txt: model and labels used to detect pistols
+ssdlite_mobilenet_v2_other_weapons.pb and .txt: model and labels used to detect long-guns
+frozen_inference_graph.pb and .txt: model and labels used to detect both pistols and long-guns

@@ -1,0 +1,13 @@
+modules importation
+
+import os
+import cv2
+import timeit
+import numpy as np
+import tensorflow as tf
+from IPython.display import clear_output
+import sounddevice as sd
+import soundfile as sf
+
+Video Survelliance With Alert System using tensorflow with sdlite_mobilenet_v2 technique
+
